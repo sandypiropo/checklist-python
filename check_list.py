@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 
 def criar_janela():
-    sg.theme('Deult1')
+    sg.theme('Default1')
     linha = [
         [sg.Checkbox(''), sg.Input('')]
     ]
@@ -20,7 +20,7 @@ def criar_janela():
 
 
 janela = criar_janela()
-contador = 0
+contador = 1  
 
 while True:
     event, values = janela.read()
@@ -34,6 +34,6 @@ while True:
     elif event == 'Resetar':
         janela.close()
         janela = criar_janela()
-        contador = 0
+        contador = 1
 
 janela.close()
